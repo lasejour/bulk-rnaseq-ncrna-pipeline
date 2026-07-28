@@ -24,7 +24,7 @@ The pipeline handles both single-end and paired-end reads and performs:
 - Nextflow ≥ 25.10
 - Conda (for the local profile)
 - All tool versions are managed per-process in nextflow.config — no manual installs needed
-- To create an envirnoment with all tools, users can use the envirnoment.yaml file 
+- To create an envirnoment with all tools, users can use the envirnoment.yml file 
 
 ---
 
