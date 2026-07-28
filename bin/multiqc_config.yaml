@@ -1,0 +1,17 @@
+fn_clean_exts:
+    - '.gz'
+    - '.fastq'
+    - '.fq'
+    - '.bam'
+    - '.repaired'
+    - '.log'
+    - '.out'
+    - '_R1'
+    - '_R2'
+    - '.Log.final'
+    - '.Aligned'
+    - '-ribo-'
+    - '-spacer-'
+
+fn_clean_trim:
+    - '.trimmed'
