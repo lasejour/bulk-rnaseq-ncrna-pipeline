@@ -102,7 +102,7 @@ sample2,/path/to/sample2_R1.fastq.gz,/path/to/sample2_R2.fastq.gz
 | `--genome_id_file` | Path to Ensembl transcript/gene ID table | — |
 | `--splice_junctions` | Enable two-pass splice-junction-aware mapping | `false` |
 | `--min_unique_reads` | Min uniquely mapping reads for splice junction filtering | `3` |
-| `-params-file` | Path to params YAML file | `params.yml` |
+| `-params-file` | Path to params YML file | `params.yml` |
 | `-profile` | Execution profile (e.g. `local`) | — |
 
 ---
