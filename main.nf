@@ -41,7 +41,7 @@ def helpMessage() {
      RNA-Seq Pipeline ncRNA core v2.0
     =========================================
     Usage:
-        nextflow run RNA-Seq-pipeline-ncRNA-core.nf [options]
+        nextflow run main.nf [options]
 
     Required arguments:
     * Either
@@ -153,9 +153,9 @@ workflow {
         } else {
             error """
               No input provided. Please specify either:
-                --input      Path to a CSV samplesheet OR
-                --fastq_dir  Directory containing paired FASTQ files and
-                --pattern    A grep pattern that includes the fastq files
+                --sample_file Path to a CSV samplesheet OR
+                --fastq_dir   Directory containing paired FASTQ files and
+                --pattern     A grep pattern that includes the fastq files
               """
         }
 
@@ -189,9 +189,9 @@ workflow {
         } else {
             error """
               No input provided. Please specify either:
-                --input      Path to a CSV samplesheet OR
-                --fastq_dir  Directory containing paired FASTQ files and
-                --pattern    A grep pattern that includes the fastq files
+                --sample_file Path to a CSV samplesheet OR
+                --fastq_dir   Directory containing paired FASTQ files and
+                --pattern     A grep pattern that includes the fastq files
               """
         }
       }
