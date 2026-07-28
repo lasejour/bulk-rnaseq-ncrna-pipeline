@@ -1,0 +1,53 @@
+# ============================================================
+# Bulk RNA-Seq pipeline — run parameters
+# Usage: nextflow run modularized_pipeline.nf -profile local -params-file params.yml
+# ============================================================
+
+
+prep: "paired-end"                        # "paired-end" or "single-end"
+
+# ------------------------------------------------------------
+# Output
+# ------------------------------------------------------------
+output: "results"
+
+# ------------------------------------------------------------
+# Genome — provide EITHER a prebuilt STAR index OR raw files
+# (not both)
+# ------------------------------------------------------------
+# Option A: prebuilt index (recommended)
+# genome_index: "/data/resources/genomes/STAR/GRCh38.114_prim"
+# genome_id_file: "/data/resources/genomes/GRCh38/ENS.114/Annotation/Homo_Sapiens_GRCh38.114_tx2gene_ensembl_annotation.txt"
+# genome_annot_file: null
+# genome_fasta_file: null
+
+# Option B: build index on the fly (comment out Option A above)
+# genome_index: null
+# genome_fasta_file: "/home/lenbob/workSpace/pipeline_dev/salmon_index_work/Homo_sapiens.GRCh38.dna.primary_assembly.fa"
+# genome_annot_file: "/home/lenbob/workSpace/pipeline_dev/star_index_work/Homo_sapiens.GRCh38.115.gtf"
+# genome_id_file: ""
+
+# ------------------------------------------------------------
+# Transcriptome — provide EITHER a prebuilt Salmon index OR
+# a transcriptome fasta (not both)
+# ------------------------------------------------------------
+# Option A: prebuilt index (recommended)
+# salmon_index: "/data/resources/genomes/Salmon/GRCh38/v1.5/GRCh38/GRCh38.114.cDNA"
+# transcriptome_file: null
+
+# Option B: build index on the fly (comment out Option A above)
+# salmon_index: null
+# transcriptome_file: "/home/lenbob/workSpace/pipeline_dev/salmon_index_work/Homo_sapiens.GRCh38.cdna.all.fa"
+
+# ------------------------------------------------------------
+# rRNA / spacer contamination mapping
+# ------------------------------------------------------------
+#run_ribo_check: true
+rRNA_index: "/data/resources/genomes/STAR/rRNA/Human"
+rRNA_Spacers_index: "/data/resources/genomes/STAR/Spacers/Human"
+
+# ------------------------------------------------------------
+# splice junction flag
+# ------------------------------------------------------------
+splice_junctions: false
+min_unique_reads: 3
