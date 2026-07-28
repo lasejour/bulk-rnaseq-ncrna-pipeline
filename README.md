@@ -6,7 +6,7 @@ genome mapping and quantification.
 ---
 
 ## Pipeline Overview
-[Pipeline DAG](dag.png)
+![Pipeline DAG](dag.png)
 
 The pipeline handles both single-end and paired-end reads and performs:
 
